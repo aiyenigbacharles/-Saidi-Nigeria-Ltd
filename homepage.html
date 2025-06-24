@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saidi Nigeria Limited - Construction and Real Estate</title>
+    <link rel="icon" href="./images/saidi-logo.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1F7D53', // A vibrant green
+                        secondary: '#0f172a',
+                        accent: '#f97316',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for hero background image */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+                /* Custom styles for services background image */
+        .services-bg {
+            background-image: url('./images/colleagues.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+        }
+        .cta-bg {
+            background-image: url('./images/site.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+        }
+        
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-secondary mb-4 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 mb-8 text-center max-w-3xl mx-auto;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">
+                <div class="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-md">
+                    <!-- <span class="text-2xl font-bold">S</span> -->
+                    <img 
+                  src="./images/saidi-logo.png" 
+                  alt="Saidi Logo" 
+                  className="w-20 h-20 rounded-lg" 
+                />
+                </div>
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-primary transition">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-primary transition">About</a>
+                <a href="services.html" class="text-gray-600 hover:text-primary transition">Services</a>
+                <a href="projects.html" class="text-gray-600 hover:text-primary transition">Projects</a>
+                <a href="clients.html" class="text-gray-600 hover:text-primary transition">Clients</a>
+                <a href="contact-us.html" class="bg-primary text-white px-5 py-2 rounded-full hover:bg-green-700 transition font-medium">Contact Us</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-secondary focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#home" class="block text-gray-600 hover:text-primary transition">Home</a>
+            <a href="about.html" class="block text-gray-600 hover:text-primary transition">About</a>
+            <a href="services.html" class="block text-gray-600 hover:text-primary transition">Services</a>
+            <!-- <a href="#projects" class="block text-gray-600 hover:text-primary transition">Projects</a> -->
+            <a href="clients.html" class="block text-gray-600 hover:text-primary transition">Clients</a>
+            <a href="contact-us.html" class="block bg-primary text-white text-center mt-2 px-5 py-2 rounded-full hover:bg-green-700 transition font-medium">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-32 md:py-48 flex flex-col items-start">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">BUILDING THE FUTURE, ONE PROJECT AT A TIME</h1>
+                    <p class="text-lg md:text-xl mb-8 font-light">We are a leading Nigerian construction company delivering excellence in real estate development, civil works, and infrastructure projects.</p>
+                    <div class="flex space-x-4">
+                        <a href="projects.html" class="bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-green-700 transition">Explore Our Projects</a>
+                        <a href="contact-us.html" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2">
+                        <img src="./images/working.jpg" alt="Construction team working" class="rounded-lg shadow-2xl w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="section-title text-left">WHO WE ARE</h2>
+                        <p class="text-gray-600 mb-4">At Saidi Nigeria Limited, we specialize in quality-driven construction services for real estate, infrastructure, and industrial projects. With decades of experience and a passion for excellence, we turn blueprints into lasting legacies. Our approach is rooted in precision, sustainability, and client satisfaction.</p>
+                        <p class="text-gray-600 mb-6">We pride ourselves on our ability to adapt and innovate, always keeping abreast of the latest industry trends and technologies. This commitment ensures that every project we undertake not only meets but exceeds expectations, delivering value and reliability.</p>
+                        <a href="./about.html" class="text-primary font-semibold hover:underline">Read More &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Core Services Section -->
+        <section id="services" class="py-20 relative services-bg">
+             <!-- Overlay for readability -->
+            <div class="absolute inset-0 bg-secondary opacity-40"></div>
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="section-title text-white"><b>OUR CORE SERVICES</b></h2>
+                <p class="section-subtitle text-gray-100">We offer a comprehensive range of services to meet the diverse needs of our clients.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-primary/80 backdrop-blur-sm text-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-green-400/50">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Real Estate Construction</h3>
+                        <p class="font-light">From residential estates to commercial properties, we build to exceed expectations.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-primary/80 backdrop-blur-sm text-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-green-400/50">
+                        <div class="flex justify-center mb-4">
+                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-9.998 12.078 12.078 0 01.665-6.479L12 14z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-9.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Civil & Structural Works</h3>
+                        <p class="font-light">Roads, bridges, drainages, and public infrastructure, delivered with engineering excellence.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-primary/80 backdrop-blur-sm text-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-green-400/50">
+                        <div class="flex justify-center mb-4">
+                           <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2 1m0 0l-2-1m2 1V2M8 7l2 1M8 7L6 6M8 7v2.5M12 21l-2-1m0 0l-2 1m2-1v-2.5M6 17l-2 1m2-1l-2-1m2 1v2.5M18 17l2 1m-2-1l2-1m-2-1v2.5"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Project Management</h3>
+                        <p class="font-light">Efficient project planning, coordination, and execution from start to finish.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="bg-primary/80 backdrop-blur-sm text-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300 border border-green-400/50">
+                         <div class="flex justify-center mb-4">
+                             <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7m-6 3l6-3m0 0l6 3m-6-3V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3m0 0l-6 3m0 0l6 3"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Consultancy & Design</h3>
+                        <p class="font-light">Innovative designs, feasibility studies, and technical consultancy to bring your vision to life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Projects Section
+        <section id="projects" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">OUR PROJECTS</h2>
+                 <p class="section-subtitle">A glimpse into our portfolio of excellence.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="rounded-lg overflow-hidden shadow-lg group">
+                        <img src="https://placehold.co/600x400/a3e635/ffffff?text=Saidi+Homes" alt="Project 1" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                     <div class="rounded-lg overflow-hidden shadow-lg group">
+                        <img src="https://placehold.co/600x400/86efac/ffffff?text=Commercial+Complex" alt="Project 2" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                     <div class="rounded-lg overflow-hidden shadow-lg group">
+                        <img src="https://placehold.co/600x400/4ade80/ffffff?text=Modern+Villa" alt="Project 3" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Testimonials Section -->
+        <section id="clients" class="py-20">
+             <div class="container mx-auto px-6">
+                 <h2 class="section-title">WHAT OUR CLIENTS ARE SAYING</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-gray-600 mb-4 italic">"Saidi Nigeria Limited transformed our experience with their exceptional commitment to quality."</p>
+                        <p class="font-bold text-primary">- Town Developer, Abuja</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-gray-600 mb-4 italic">"Working with Saidi Nigeria Limited was a game changer. Their attention to detail and dedication to quality was unmatched."</p>
+                        <p class="font-bold text-primary">- Estate Developer, Lagos</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-gray-600 mb-4 italic">"Saidi Nigeria Limited creates outstanding structures that merge elegance and innovation, combining style and substance."</p>
+                        <p class="font-bold text-primary">- Estate Developer, Oyo</p>
+                    </div>
+                 </div>
+             </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="relative cta-bg">
+            <div class="absolute inset-0 bg-secondary opacity-60"></div>
+            <div class="container mx-auto px-6 py-20 text-center relative z-10 text-white">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Build Something Great Together</h2>
+                 <p class="text-lg md:text-xl mb-8 font-light max-w-3xl mx-auto">Ready to break ground on your next big project? Reach out to our team for expert consultation and tailored solutions.</p>
+                 <a href="contact-us.html" class="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-green-700 transition-transform duration-300 inline-block transform hover:scale-105">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <!-- <section id="contact" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                 <h2 class="section-title">CONTACT US</h2>
+                 <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                     <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                             <div>
+                                 <label for="first-name" class="block text-gray-700 font-medium mb-2">First Name</label>
+                                 <input type="text" id="first-name" name="first-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                             </div>
+                             <div>
+                                 <label for="last-name" class="block text-gray-700 font-medium mb-2">Last Name</label>
+                                 <input type="text" id="last-name" name="last-name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                             </div>
+                        </div>
+                         <div class="mb-6">
+                             <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                             <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="example@example.com" required>
+                         </div> -->
+                         <!-- <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" placeholder="How can we help you?"></textarea>
+                         </div> -->
+                         <div class="text-center">
+                             <button type="submit" class="bg-primary text-white w-full px-8 py-3 rounded-full font-semibold hover:bg-green-700 transition">Submit</button>
+                         </div>
+                     </form>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1F7D53] text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; Saidi Nigeria Ltd. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (const link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
